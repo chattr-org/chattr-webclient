@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import './Appbar.scss';
 import { Menu } from 'stardust';
 
-class Header extends Component {
+class Appbar extends Component {
   state = {};
 
   handleItemClick = (event, { name }) => {
@@ -13,7 +14,7 @@ class Header extends Component {
   render() {
     const { activeItem } = this.state;
     return (
-      <Menu stackable fixed='top' size='large'>
+      <Menu fixed='bottom' size='large'>
         <Menu.Item
           name='test1'
           active={activeItem === 'test1'}
@@ -52,4 +53,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default Appbar;
